@@ -1,5 +1,4 @@
 # system.prop
-# CUBOT Rainbow
 
 # MTK, Infinity, 20090720 {
 wifi.interface=wlan0
@@ -41,7 +40,7 @@ rild.libargs=-d /dev/ttyC0
 ro.telephony.default_network=0
 
 # Navbar 0 enable or 1 disable 
-qemu.hw.mainkeys=1
+qemu.hw.mainkeys=0
 
 # Audio
 ro.camera.sound.forced=0
@@ -55,7 +54,7 @@ ro.mtk_perf_simple_start_win=1
 ro.mtk_perf_response_time=1
 
 # Time Zone
-persist.sys.timezone=Europe/Berlin
+persist.sys.timezone=Europe/Warsaw
 
 # ClearMotion
 persist.sys.display.clearMotion=0

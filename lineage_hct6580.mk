@@ -23,5 +23,5 @@ PRODUCT_COPY_FILES := device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
-$(call inherit-product, device/CUBOT/Rainbow/device_Rainbow.mk)
-$(call inherit-product-if-exists, vendor/CUBOT/Rainbow/device-vendor.mk)
+$(call inherit-product, device/alps/hct6580/device_hct6580.mk)
+$(call inherit-product-if-exists, vendor/alps/hct6580/device-vendor.mk)

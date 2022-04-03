@@ -24,14 +24,14 @@ persist.sys.display.clearMotion=0
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
-$(call inherit-product-if-exists, vendor/CUBOT/Rainbow/Rainbow-vendor.mk)
+$(call inherit-product-if-exists, vendor/alps/hct6580/hct6580-vendor.mk)
 
-DEVICE_PACKAGE_OVERLAYS += device/CUBOT/Rainbow/overlay
-PRODUCT_PACKAGE_OVERLAYS += device/CUBOT/Rainbow/overlay # enable this to be able overlay a default wallpaper
+DEVICE_PACKAGE_OVERLAYS += device/alps/hct6580/overlay
+PRODUCT_PACKAGE_OVERLAYS += device/alps/hct6580/overlay # enable this to be able overlay a default wallpaper
 
-LOCAL_PATH := device/CUBOT/Rainbow
+LOCAL_PATH := device/alps/hct6580
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-	LOCAL_KERNEL := $(LOCAL_PATH)/kernel
+	LOCAL_KERNEL := $(LOCAL_PATH)/prebuilt/kernel
 else
 	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
@@ -47,10 +47,15 @@ PRODUCT_PACKAGES += \
 
 # Media
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml \
+    $(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml \
+    $(LOCAL_PATH)/configs/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
+    $(LOCAL_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:system/etc/media_codecs_google_video_le.xml \
-    $(LOCAL_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf
+    $(LOCAL_PATH)/configs/media_codecs_mediatek_audio.xml:system/etc/media_codecs_mediatek_audio.xml \
+    $(LOCAL_PATH)/configs/media_codecs_mediatek_video.xml:system/etc/media_codecs_mediatek_video.xml
 
 # Wifi
 PRODUCT_PACKAGES += \
