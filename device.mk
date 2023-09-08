@@ -2,10 +2,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
-$(call inherit-product, device/CUBOT/Rainbow/vendor/copyfiles.mk)
-$(call inherit-product, vendor/CUBOT/Rainbow/Rainbow-vendor-blobs.mk)
+$(call inherit-product, device/alps/hct6580/vendor/copyfiles.mk)
+$(call inherit-product, vendor/alps/hct6580/hct6580-vendor-blobs.mk)
 
-LOCAL_PATH := device/CUBOT/Rainbow
+LOCAL_PATH := device/alps/hct6580
 
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
@@ -14,7 +14,7 @@ PRODUCT_AAPT_CONFIG := normal xhdpi xxhdpi
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # Recovery allowed devices
-TARGET_OTA_ASSERT_DEVICE := CUBOT_Rainbow,CUBOT_Rainbow_sprout,CUBOT Rainbow,Rainbow
+TARGET_OTA_ASSERT_DEVICE := hct6580,w363,b6580_weg_a_m
 
 PRODUCT_PACKAGES += \
    libxlog

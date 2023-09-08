@@ -1,6 +1,6 @@
 #
 #
-# system.prop for Rainbow
+# system.prop for hct6580
 #
 
 rild.libpath=/system/lib/mtk-ril.so

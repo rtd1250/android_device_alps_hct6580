@@ -1,7 +1,7 @@
 # mt6580 platform boardconfig
-LOCAL_PATH := device/CUBOT/Rainbow
+LOCAL_PATH := device/alps/hct6580
 
--include vendor/CUBOT/Rainbow/BoardConfigVendor.mk
+-include vendor/alps/hct6580/BoardConfigVendor.mk
 
 TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
 
@@ -134,7 +134,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 
 # SELinux
 BOARD_SEPOLICY_DIRS := \
-       device/CUBOT/Rainbow/sepolicy
+       device/alps/hct6580/sepolicy
 
 # Hack for building without kernel sources
 $(shell mkdir -p $(OUT)/obj/KERNEL_OBJ/usr)

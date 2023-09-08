@@ -2,10 +2,10 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit from hardware-specific part of the product configuration
-$(call inherit-product, device/CUBOT/Rainbow/device.mk)
+$(call inherit-product, device/alps/hct6580/device.mk)
 
 # Release name
-PRODUCT_RELEASE_NAME := Rainbow
+PRODUCT_RELEASE_NAME := hct6580
 
 EXTENDED_FONT_FOOTPRINT := true
 
