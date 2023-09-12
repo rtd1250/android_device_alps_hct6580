@@ -6,7 +6,7 @@ patch -p1 < ../../../device/alps/hct6580/patches/packages_apps_Settings/0002-and
 git clean -f -d
 cd ../../../
 cd packages/apps/FMRadio
-patch -p1 < ../../../device/alps/NOTE_S/patches/packages_apps_FMRadio/0001-fix-fm-radio-power-up-mt6737m-mt6627-chip.patch
+patch -p1 < ../../../device/alps/hct6580/patches/packages_apps_FMRadio/0001-fix-fm-radio-power-up-mt6737m-mt6627-chip.patch
 cd ../../..
 cd system/core
 patch -p1 < ../../device/alps/hct6580/patches/system_core/0001-libnetutils-add-MTK-bits.patch
